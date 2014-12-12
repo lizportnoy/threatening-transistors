@@ -189,6 +189,7 @@ angular.module('app.add', [])
     $scope.code = {code: code.split('=')[1].split('#')[0]};
     return $http ({
       method: 'POST',
+<<<<<<< HEAD
       url: '/payments',
       data: $scope.code
       }).then(function(res){
@@ -255,8 +256,7 @@ angular.module('app.add', [])
     });
   }
 
-  setTimeout($scope.schedulePay, 5000);
->>>>>>> hardcoded payment working
+
 
   $scope.$on('$viewContentLoaded', function(){
     
@@ -265,10 +265,5 @@ angular.module('app.add', [])
 
 
   });
-
 });
 
-<<<<<<< HEAD
-
-=======
->>>>>>> hardcoded payment working
