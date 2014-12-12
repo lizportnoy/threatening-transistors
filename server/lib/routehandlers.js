@@ -119,7 +119,6 @@ var scheduledEvents = {};
 var count = 0;
 
 exports.schedulePay = function (req, res) {
-
   var amount = req.body.amount;
   var receiverId = req.body.receiverID;
   var date = req.body.date
@@ -146,6 +145,7 @@ exports.schedulePay = function (req, res) {
   res.send('payment scheduled');
 
 }
+
 
 exports.getFriends = function (req, res) {
   var requestURL = 'https://api.venmo.com/v1/users/' + req.session.venmoID + '/friends?access_token=' + req.session.accessToken + '&&limit=300';

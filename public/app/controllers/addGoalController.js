@@ -271,4 +271,8 @@ angular.module('app.add', [])
 
 
 });
+<<<<<<< HEAD
 >>>>>>> merged payments conflict
+=======
+
+>>>>>>> hardcoded payment working
