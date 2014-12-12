@@ -32,6 +32,10 @@ exports.logout = function (req, res) {
       req.logout();
       res.send('loggedOut')
   });
+<<<<<<< HEAD
+=======
+
+>>>>>>> [fix] removed footer
 };
 
 exports.getGoals = function (req, response) {
