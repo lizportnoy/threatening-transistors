@@ -63,6 +63,7 @@ div#friendsList.ui.form >label {
   width: 125%;
 }
 
+<<<<<<< HEAD
 
 .ui.form .field.friends, .ui.form .field.amount{
   margin-left: 3em;
@@ -115,6 +116,19 @@ ui.image.map {
   font-weight: bold;
   color: #ffffff;
 }
+
+.flock {
+  height: 95vh;
+  background-image: url('../images/flock.jpg');
+}
+.mapdiv {
+  height: 100vh;
+}
+.map {
+  height: 75%;
+  width: 75%;
+}
+
 .footer {
   margin-top: -100px;
   height: 100px;
