@@ -48,6 +48,7 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
       }
     }
   })
+<<<<<<< HEAD
   .state('allGoals', {
     url: '/allgoals',
     views: {
@@ -57,6 +58,8 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
       }
     }
   })
+=======
+>>>>>>> [done] initial landing page
 
   .state('root', {
     url: '/',
@@ -68,3 +71,7 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
   });
 });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> [done] initial landing page
