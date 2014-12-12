@@ -1,10 +1,7 @@
 body {
 	padding-top: 2px;
-<<<<<<< HEAD
   /*background-color: rgba(0,0,0,.9);*/
-=======
   background-color: rgba(0,0,0,.9);
->>>>>>> [done] initial landing page
 }
 
 
@@ -62,12 +59,11 @@ div#friendsList.ui.form >label {
   display: inline-block;
   width: 35%;
 }
-<<<<<<< HEAD
 .ui.label.friends, .ui.label.amount {
   width: 125%;
 }
 
-<<<<<<< HEAD
+
 
 .ui.form .field.friends, .ui.form .field.amount{
   margin-left: 3em;
@@ -89,6 +85,10 @@ div#friendsList.ui.form >label {
     display: block;
     width: 40%;
     height: auto;
+}
+
+a.venmoAuth {
+  color: white;
 }
 
 .flock {
