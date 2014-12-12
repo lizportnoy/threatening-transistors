@@ -89,6 +89,7 @@ exports.payments = function (req, res) {
     } }, function (error, response, body) {
       if(error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.log(error);
         res.status(404).send('no good');
       }
@@ -138,12 +139,18 @@ exports.getFriends = function (req, res) {
   var requestURL = 'https://api.venmo.com/v1/users/' + req.session.venmoID + '/friends?access_token=' + req.session.accessToken + '&&limit=300';
 =======
         console.log('error');
+=======
+        console.log(error);
+>>>>>>> hacky version of friends display working
         res.status(404).send('no good');
-        return;
       }
+      else{
         req.session.accessToken = JSON.parse(body).access_token;
-        req.session.venmoID = JSON.parse(body)['user']['id'];
+        if(JSON.parse(body).user) {
+          req.session.venmoID = JSON.parse(body).user.id;
+        }
         res.send(body);
+      }
     })
 }
 
