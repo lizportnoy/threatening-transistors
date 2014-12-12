@@ -130,6 +130,16 @@ angular.module('app.add', [])
     }
   }
 
+<<<<<<< HEAD
+=======
+  $scope.popUpVenmo = function () {
+    // if yes, schedule payment
+  }
+  //Prepares data to be sent to the server. The server is
+  //expecting specific field names and we want to make sure to match those
+  //
+
+>>>>>>> merged payments conflict
   $scope.prepareData = function (data) {
     var prepared = {};
 
@@ -199,6 +209,8 @@ angular.module('app.add', [])
     }
   };
 
+  $scope.venmoFriends = null;
+
   $scope.getFriends = function () {
     return $http ({
       method: 'GET',
@@ -208,6 +220,7 @@ angular.module('app.add', [])
       $scope.venmoFriends = res.data;
     });
   }
+
 
   $scope.getUserData($scope.getFriends);
   console.log($scope.venmoFriends);

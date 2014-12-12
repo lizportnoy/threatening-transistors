@@ -65,6 +65,7 @@ app.post('/login', passport.authenticate('local-login', {
 app.post('/payments', handler.payments);
 app.post('/schedulePay', handler.schedulePay);
 app.get('/getFriends', handler.getFriends);
+
 app.get('/logout', handler.logout);
 
 

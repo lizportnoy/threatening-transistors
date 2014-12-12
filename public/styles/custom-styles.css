@@ -58,6 +58,7 @@ div#friendsList.ui.form >label {
   display: inline-block;
   width: 35%;
 }
+<<<<<<< HEAD
 .ui.label.friends, .ui.label.amount {
   width: 125%;
 }
@@ -86,6 +87,7 @@ div#friendsList.ui.form >label {
 }
 
 .flock {
+
   height: 95vh;
   background-image: url('../images/flock.jpg');
 }

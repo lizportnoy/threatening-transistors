@@ -77,6 +77,10 @@ var headers = {
 };
 
 exports.payments = function (req, res) {
+<<<<<<< HEAD
+=======
+  var userinfo = null;
+>>>>>>> merged payments conflict
   request.post(
     'https://api.venmo.com/v1/oauth/access_token',
     { form: {"client_id": 2195,
@@ -84,6 +88,7 @@ exports.payments = function (req, res) {
     "code": req.body.code
     } }, function (error, response, body) {
       if(error) {
+<<<<<<< HEAD
         console.log(error);
         res.status(404).send('no good');
       }
@@ -131,6 +136,21 @@ exports.schedulePay = function (req, res) {
 
 exports.getFriends = function (req, res) {
   var requestURL = 'https://api.venmo.com/v1/users/' + req.session.venmoID + '/friends?access_token=' + req.session.accessToken + '&&limit=300';
+=======
+        console.log('error');
+        res.status(404).send('no good');
+        return;
+      }
+        req.session.accessToken = JSON.parse(body).access_token;
+        req.session.venmoID = JSON.parse(body)['user']['id'];
+        res.send(body);
+    })
+}
+
+exports.getFriends = function (req, res) {
+  var requestURL = 'https://api.venmo.com/v1/users/' + req.session.venmoID + '/friends?access_token=' + req.session.accessToken + '&&limit=300';
+  console.log(requestURL)
+>>>>>>> merged payments conflict
   request.get(
     requestURL, function (error, response, body) {
       if(error) {
