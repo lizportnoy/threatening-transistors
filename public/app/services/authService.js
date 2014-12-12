@@ -38,10 +38,8 @@ angular.module('app.authFact', [])
 			url: '/signup',
 			data: {email: email, name: name, password: password}
 		}).then(function(res){
-
-  			console.log(res.data);
+			console.log(res.data);
 			 loggedInUser[0] = true;
-
 			$location.url("/profile");
 		});
 	}
