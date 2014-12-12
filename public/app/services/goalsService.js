@@ -39,7 +39,6 @@ angular.module('app.goalFact', [])
     });
   };
 
-<<<<<<< HEAD
   var addMotivate = function(gid){
     console.log('adding motivation..');
     return $http({
@@ -49,8 +48,6 @@ angular.module('app.goalFact', [])
     });
   };
 
-=======
->>>>>>> [done] initial all goals page
 	var deleteGoal = function(goalID, callback){
 		console.log("deleting goal: " + goalID);
 		// delete payment schedule
@@ -71,11 +68,6 @@ angular.module('app.goalFact', [])
 		createGoal: createGoal,
 		getGoals: getGoals,
     getAllGoals: getAllGoals,
-<<<<<<< HEAD
 		deleteGoal: deleteGoal,
-    addMotivate: addMotivate
-=======
-		deleteGoal: deleteGoal
->>>>>>> [done] initial all goals page
 	};
 });

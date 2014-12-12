@@ -47,6 +47,10 @@ exports.getGoals = function (req, response) {
 exports.getAllGoals = function (req, response) {
   Goal.find().exec(function(err, result) {
       if (!err) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> [done] motivate others page
         response.send(result);
       } else {
         console.log('err');
@@ -54,7 +58,10 @@ exports.getAllGoals = function (req, response) {
     });
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> [done] motivate others page
 exports.addMotivate = function(req, response){
   var goalData = req.body;
   Goal.findOne({'userId': goalData[1]}, function(err, match){
@@ -66,7 +73,10 @@ exports.addMotivate = function(req, response){
   });
 };
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> [done] motivate others page
 exports.removeGoal = function (req, res) {
   var name = req.session.name;
   var email = req.session.email;
