@@ -47,13 +47,13 @@ exports.getGoals = function (req, response) {
 exports.getAllGoals = function (req, response) {
   Goal.find().exec(function(err, result) {
       if (!err) {
-
         response.send(result);
       } else {
         console.log('err');
       }
     });
 };
+
 
 exports.addMotivate = function(req, response){
   var goalData = req.body;
@@ -65,6 +65,7 @@ exports.addMotivate = function(req, response){
     }
   });
 };
+
 
 exports.removeGoal = function (req, res) {
   var name = req.session.name;

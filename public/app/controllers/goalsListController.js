@@ -22,6 +22,7 @@ angular.module('app.goals', [])
 	}
 
   $scope.getAllGoals = function(){
+<<<<<<< HEAD
    // $scope.data.goalsList = goalsList;
     goalsService.getAllGoals().then(function(data){
       var goalArr = [];
@@ -41,6 +42,16 @@ angular.module('app.goals', [])
     gid[3]++;
     goalsService.addMotivate(gid);
   };  
+=======
+   $scope.data.goalsList = goalsList;
+   goalsService.getAllGoals().then(function(data){
+    console.log('all da goals', data);
+     $scope.data.goalsList = data;
+     console.log('all goals',JSON.stringify(data[0]['goals']));
+   });
+  }
+
+>>>>>>> [done] initial all goals page
 	//Shows success dimmer flash and then deletes goal when the user clicks "I did it"
 
 	$scope.celebrateSuccess = function(event){

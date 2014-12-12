@@ -2,9 +2,14 @@
 *  Setup for app main and ui-router routes *
 *******************************************/
 
+<<<<<<< HEAD
 angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.goals','app.logout',  'app.authFact',   'app.goalFact'])
 
 
+=======
+
+angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.goals', 'app.logout',  'app.authFact', 'app.goalFact'])
+>>>>>>> [done] initial all goals page
 .config(function($stateProvider, $urlRouterProvider) {
 
 
