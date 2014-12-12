@@ -66,4 +66,7 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
   });
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> [done] initial landing page
