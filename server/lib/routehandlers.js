@@ -92,6 +92,8 @@ exports.payments = function (req, res) {
       }
     })
 }
+var scheduledEvents = {};
+var count = 0;
 
 exports.schedulePay = function (req, res) {
 
@@ -106,7 +108,7 @@ exports.schedulePay = function (req, res) {
     amount: amount
   }
 
-  var j = schedule.scheduleJob(date, function(){
+  scheduledEvents[count] = schedule.scheduleJob(date, function(){
     request.post(
       'https://api.venmo.com/v1/payments',
       { form: paymentReq}, function (error, response, body) {
@@ -117,7 +119,9 @@ exports.schedulePay = function (req, res) {
     });
   });
 
-res.send('payment scheduled');
+  count++;
+  res.send('payment scheduled');
+
 }
 
 

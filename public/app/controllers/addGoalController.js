@@ -97,7 +97,8 @@ angular.module('app.add', [])
                 daily: false,
                 weekly: false,
                 monthly: false
-              }
+              },
+              payCount: null;
             }
       };
     $scope.showSkipButton = false;
@@ -136,6 +137,12 @@ angular.module('app.add', [])
     prepared.startDate = new Date();
     prepared.endDate = $scope.picker.get('select').obj; //make utc
     prepared.why = data.why; //need to adjust to array
+    if ($scope.payIncluded) {
+      prepared.payCount = $scope.payCount;
+      $scope.payCount++
+    } else {
+      prepared.payCount = null;
+    }
 
     for (key in data.freq){
       if (data.freq[key]){
@@ -202,14 +209,11 @@ angular.module('app.add', [])
     });
   }
 
-  if (!$scope.venmoFriends){
-   $scope.getUserData($scope.getFriends);
-   console.log($scope.venmoFriends);
-  }
+  $scope.getUserData($scope.getFriends);
+  console.log($scope.venmoFriends);
 
-  $scope.runScript = function () {
-
-  }
+  $scope.payCount = 0;
+  $scope.payIncluded = false;
 
   $scope.schedulePay = function (amount, id) {
 
@@ -224,6 +228,7 @@ angular.module('app.add', [])
       data: payDetails
     }).then(function(res){
       console.log(res.data)
+      $scope.payIncluded = true;
     });
   }
 
