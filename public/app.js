@@ -2,8 +2,8 @@
 *  Setup for app main and ui-router routes *
 *******************************************/
 
+angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.goals','app.logout',  'app.authFact',   'app.goalFact'])
 
-angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.goals', 'app.logout',  'app.authFact', 'app.goalFact'])
 .config(function($stateProvider, $urlRouterProvider) {
 
 
@@ -47,7 +47,6 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
       }
     }
   })
-<<<<<<< HEAD
   .state('allGoals', {
     url: '/allgoals',
     views: {
@@ -57,8 +56,6 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
       }
     }
   })
-=======
->>>>>>> [fix] updated landing page
   .state('root', {
     url: '/',
     views: {
@@ -69,7 +66,5 @@ angular.module('app', ['ui.router', 'app.signup', 'app.login', 'app.add', 'app.g
   });
 });
 
-<<<<<<< HEAD
 
-=======
->>>>>>> [done] initial landing page
+
