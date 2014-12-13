@@ -210,11 +210,18 @@ angular.module('app.add', [])
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> changes
   $scope.getUserData($scope.getFriends);
   console.log($scope.venmoFriends);
 
   $scope.payCount = 0;
   $scope.payIncluded = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> changes
 
   $scope.schedulePay = function (amount, id) {
 
@@ -264,15 +271,6 @@ angular.module('app.add', [])
 
 
   });
-<<<<<<< HEAD
-});
-
-=======
 
 
 });
-<<<<<<< HEAD
->>>>>>> merged payments conflict
-=======
-
->>>>>>> hardcoded payment working

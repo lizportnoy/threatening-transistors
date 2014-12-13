@@ -11,16 +11,10 @@ var goalSchema = mongoose.Schema({
     startDate: Date,
     endDate: Date,
     freq: String,
-<<<<<<< HEAD
-<<<<<<< HEAD
+    motivation: Number,
     why: [String],
     payCount: Number
-=======
-=======
->>>>>>> [done] motivate others page
-    motivation: Number,
-    why: [String]
->>>>>>> [done] motivate others page
+
   }]
 });
 
