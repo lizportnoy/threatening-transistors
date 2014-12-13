@@ -199,8 +199,6 @@ angular.module('app.add', [])
     }
   };
 
-  $scope.venmoFriends = null;
-
   $scope.getFriends = function () {
     return $http ({
       method: 'GET',
@@ -211,6 +209,7 @@ angular.module('app.add', [])
     });
   }
 
+<<<<<<< HEAD
   $scope.getUserData($scope.getFriends);
   console.log($scope.venmoFriends);
 
@@ -233,6 +232,31 @@ angular.module('app.add', [])
       $scope.payIncluded = true;
     });
   }
+=======
+  if (!$scope.venmoFriends){
+   $scope.getUserData($scope.getFriends);
+   console.log($scope.venmoFriends);
+  }
+
+  $scope.runScript = function () {
+
+  }
+    
+
+  $scope.schedulePay = function () {
+     var payDetails = {amount:'0.01', receiverID: '1232668230418432302'}
+    
+    return $http ({
+      method: 'POST',
+      url: '/schedulePay',
+      data: payDetails
+    }).then(function(res){
+      console.log(res.data)
+    });
+  }
+
+  setTimeout($scope.schedulePay, 5000);
+>>>>>>> hardcoded payment working
 
   $scope.$on('$viewContentLoaded', function(){
     
@@ -244,4 +268,7 @@ angular.module('app.add', [])
 
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> hardcoded payment working
